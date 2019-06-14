@@ -5,7 +5,7 @@ class Business < ApplicationRecord
 
   has_many :categories
   before_validation {self[:uid] = self[:managerPhone]}
-  before_save -> { skip_confirmation! }
+  # before_save -> { skip_confirmation! }
 
 
   def email_required?
