@@ -1,6 +1,6 @@
 class Business < ApplicationRecord
   include DeviseTokenAuth::Concerns::User
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable, authentication_keys: [:managerPhone]
 
   has_many :categories

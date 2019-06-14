@@ -1,15 +1,21 @@
 ActiveAdmin.register Item do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+  permit_params :nameEn, :nameAr, :descriptionEn, :descriptionAr, :preparationTime, :position, :price, :category_id
+
+  form do |f|
+    f.semantic_errors *f.object.errors.keys
+
+    f.inputs 'Business Details' do
+      f.input :category_id, as: :select, collection: Category.all.map{|x| [x.nameEn, x.id]}
+      f.input :nameEn
+      f.input :nameAr
+      f.input :descriptionEn
+      f.input :descriptionAr
+      f.input :preparationTime
+      f.input :position, as: :select, collection: 1..32
+      f.input :price
+    end
+    f.actions
+  end
 
 end
