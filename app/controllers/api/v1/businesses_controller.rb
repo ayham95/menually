@@ -1,4 +1,4 @@
-class Api::V1::BusinessesController < ApiController
+class Api::V1::BusinessesController < Api::ApplicationController
   before_action :set_business, only: [:show, :update, :destroy]
 
   # GET /businesses
