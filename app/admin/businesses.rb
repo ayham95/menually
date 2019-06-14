@@ -1,4 +1,13 @@
 ActiveAdmin.register Business do
+  # controller do
+  #   def update
+  #     if params[:password].blank? && params[:business][:password_confirmation].blank?
+  #       params[:business].delete("password")
+  #       params[:business].delete("password_confirmation")
+  #     end
+  #     super
+  #   end
+  # end
 
   permit_params
 
@@ -19,6 +28,9 @@ ActiveAdmin.register Business do
     f.actions
 
   end
+
+
+
 
   permit_params do
     permitted = [:nameAr, :nameEn, :logo, :theme, :managerPhone, :wifiPassword, :password]

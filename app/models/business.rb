@@ -6,6 +6,9 @@ class Business < ApplicationRecord
   has_many :categories
   before_validation {self[:uid] = self[:managerPhone]}
   before_save -> { skip_confirmation! }
+  validates_presence_of :nameAr, :nameEn, :managerPhone
+  validates :password, presence: true, on: :create
+
 
 
   def email_required?
@@ -15,5 +18,9 @@ class Business < ApplicationRecord
   def email_changed?
     false
   end
+
+  # def password_required?
+  #   true
+  # end
 
 end

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
   namespace :api do
-      mount_devise_token_auth_for 'Business', at: 'auth1'
+      mount_devise_token_auth_for 'Business', at: 'auth'
   end
 
 end
