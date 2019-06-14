@@ -45,7 +45,7 @@ class DeviseTokenAuthUpdateBusinesses < ActiveRecord::Migration[6.0]
     add_index :businesses, :email,                unique: false
     add_index :businesses, [:uid, :provider],     unique: true
     add_index :businesses, :reset_password_token, unique: true
-    add_index :businesses, :confirmation_token,   unique: true
+    # add_index :businesses, :confirmation_token,   unique: true
     add_index :businesses, :current_sign_in_at
 
     # add_index :businesses, :unlock_token,       unique: true
