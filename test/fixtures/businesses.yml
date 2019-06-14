@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameAr: MyString
+  nameEn: MyString
+  logo: MyString
+  theme: MyString
+  managerPhone: MyString
+  wifiPassword: MyString
+
+two:
+  nameAr: MyString
+  nameEn: MyString
+  logo: MyString
+  theme: MyString
+  managerPhone: MyString
+  wifiPassword: MyString

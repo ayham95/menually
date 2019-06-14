@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  business: one
+  nameEn: MyString
+  nameAr: MyString
+  position: 
+
+two:
+  business: two
+  nameEn: MyString
+  nameAr: MyString
+  position: 
