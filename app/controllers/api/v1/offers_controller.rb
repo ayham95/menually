@@ -1,5 +1,4 @@
-class Api
-  ::V1::OffersController < ApplicationController
+class Api::V1::OffersController < ApplicationController
   before_action :set_offer, only: [:show, :update, :destroy]
 
   # GET /offers
