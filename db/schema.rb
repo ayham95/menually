@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_085156) do
+ActiveRecord::Schema.define(version: 2019_06_16_175501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,20 @@ ActiveRecord::Schema.define(version: 2019_06_12_085156) do
     t.index ["category_id"], name: "index_items_on_category_id"
   end
 
+  create_table "offers", force: :cascade do |t|
+    t.string "image"
+    t.string "titleEn"
+    t.string "titleAr"
+    t.string "descriptionEn"
+    t.string "descriptionAr"
+    t.boolean "active"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "business_id", null: false
+    t.index ["business_id"], name: "index_offers_on_business_id"
+  end
+
   add_foreign_key "categories", "businesses"
   add_foreign_key "items", "categories"
+  add_foreign_key "offers", "businesses"
 end

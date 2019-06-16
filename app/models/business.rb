@@ -4,6 +4,7 @@ class Business < ApplicationRecord
          :recoverable, :rememberable, :validatable, authentication_keys: [:managerPhone]
 
   has_many :categories
+  has_many :offers
   before_validation {self[:uid] = self[:managerPhone]}
   before_save -> { skip_confirmation! }
   validates_presence_of :nameAr, :nameEn, :managerPhone
@@ -18,9 +19,5 @@ class Business < ApplicationRecord
   def email_changed?
     false
   end
-
-  # def password_required?
-  #   true
-  # end
 
 end
