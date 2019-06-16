@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action {print 'ApplicationApplicationApplication'}
   # include DeviseTokenAuth::Concerns::SetUserByToken
   include ActionController::RequestForgeryProtection
 

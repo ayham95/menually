@@ -34,6 +34,7 @@ module Menu
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.app_generators.scaffold_controller = :scaffold_controller
 
     # If we want to use all HTTP verbs as DELETE and PATCH.
     # This is necessary because these verbs are simulated in Ruby on Rails

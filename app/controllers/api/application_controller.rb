@@ -2,7 +2,6 @@ class Api::ApplicationController < ActionController::Base
   include DeviseTokenAuth::Concerns::SetUserByToken
   include ActionController::RequestForgeryProtection
 
-  before_action {print 'APIAPIAPI'}
   protect_from_forgery prepend: true
   before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :authenticate_business!
