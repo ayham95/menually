@@ -28,6 +28,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'activeadmin'
 gem 'devise'
 gem 'devise_token_auth'
+gem 'active_model_serializers', '~> 0.10.0'
 
 
 group :development, :test do

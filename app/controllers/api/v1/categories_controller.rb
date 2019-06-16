@@ -4,8 +4,11 @@ class Api::V1::CategoriesController < Api::ApplicationController
   # GET /categories
   def index
     @categories = Category.all
-
-    render json: @categories
+    if params[:home].present?
+      render json: @categories, each_serializer: HomeCategorySerializer
+    else
+      render json: @categories
+    end
   end
 
   # GET /categories/1
@@ -39,13 +42,13 @@ class Api::V1::CategoriesController < Api::ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_category
-      @category = Category.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_category
+    @category = Category.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def category_params
-      params.require(:category).permit(:business_id, :nameEn, :nameAr, :position)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def category_params
+    params.require(:category).permit(:business_id, :nameEn, :nameAr, :position)
+  end
 end
