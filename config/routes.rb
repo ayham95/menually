@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :items
       resources :categories
       resources :businesses
+      resources :offers
       # mount_devise_token_auth_for 'Business', at: 'auth', skip: [:omniauth_callbacks]
     end
   end
