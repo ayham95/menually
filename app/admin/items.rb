@@ -14,6 +14,7 @@ ActiveAdmin.register Item do
       f.input :preparationTime
       f.input :position, as: :select, collection: 1..32
       f.input :price
+      f.input :image
     end
     f.actions
   end
