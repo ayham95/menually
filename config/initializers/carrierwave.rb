@@ -1,14 +1,13 @@
 CarrierWave.configure do |config|
   if Rails.env.staging? || Rails.env.production?
-    config.fog_provider = 'fog/aws'
-    config.fog_credentials = {
-        :provider => 'AWS',
-        :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-        :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
-        :region => 'eu-central-1'
+    config.aws_credentials = {
+        access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+        secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+        region: ENV.fetch('AWS_REGION'), # Required
+        stub_responses: Rails.env.test? # Optional, avoid hitting S3 actual during tests
     }
-    config.fog_directory = ENV['S3_BUCKET_NAME']
     config.storage = :aws
+    config.aws_bucket = ENV.fetch('S3_BUCKET_NAME')
   else
     config.storage = :file
     config.enable_processing = Rails.env.development?
