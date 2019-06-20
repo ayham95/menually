@@ -1,6 +1,6 @@
 ActiveAdmin.register Item do
 
-  permit_params :nameEn, :nameAr, :descriptionEn, :descriptionAr, :preparationTime, :position, :price, :category_id
+  permit_params :nameEn, :nameAr, :descriptionEn, :descriptionAr, :preparationTime, :position, :price, :image, :category_id
 
   form do |f|
     f.semantic_errors *f.object.errors.keys
