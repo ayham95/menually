@@ -1,13 +1,4 @@
 ActiveAdmin.register Business do
-  # controller do
-  #   def update
-  #     if params[:password].blank? && params[:business][:password_confirmation].blank?
-  #       params[:business].delete("password")
-  #       params[:business].delete("password_confirmation")
-  #     end
-  #     super
-  #   end
-  # end
 
   permit_params :nameEn, :nameAr, :managerPhone, :theme, :logo, :wifiPassword, :password
 
