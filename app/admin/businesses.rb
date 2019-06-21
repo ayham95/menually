@@ -9,7 +9,8 @@ ActiveAdmin.register Business do
   #   end
   # end
 
-  permit_params
+  permit_params :nameEn, :nameAr, :managerPhone, :theme, :logo, :wifiPassword, :password
+
 
   form do |f|
     f.semantic_errors *f.object.errors.keys

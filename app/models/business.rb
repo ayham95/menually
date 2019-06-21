@@ -5,6 +5,8 @@ class Business < ApplicationRecord
 
   has_many :categories
   has_many :offers
+  mount_uploader :logo, BusinessLogoUploader
+
   before_validation {self[:uid] = self[:managerPhone]}
   before_save -> { skip_confirmation! }
   validates_presence_of :nameAr, :nameEn, :managerPhone
