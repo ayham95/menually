@@ -1,4 +1,5 @@
-class Api::V1::HomeController < ApplicationController
+class Api::V1::HomeController < Api
+  ::ApplicationController
   before_action :authenticate_api_business!
 
   def index
