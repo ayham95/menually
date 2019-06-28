@@ -1,5 +1,6 @@
 class Api::V1::OffersController < ApplicationController
   before_action :set_offer, only: [:show, :update, :destroy]
+  before_action :authenticate_api_business!
 
   # GET /offers
   def index

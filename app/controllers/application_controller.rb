@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   # include DeviseTokenAuth::Concerns::SetUserByToken
-  include ActionController::RequestForgeryProtection
+  # include ActionController::RequestForgeryProtection
 
-  protect_from_forgery prepend: true
+  # protect_from_forgery prepend: true
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected

@@ -1,5 +1,6 @@
 class Api::V1::ItemsController < Api::ApplicationController
   before_action :set_item, only: [:show, :update, :destroy]
+  before_action :authenticate_api_business!
 
   # GET /items
   def index
