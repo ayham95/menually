@@ -1,6 +1,6 @@
 ActiveAdmin.register Offer do
 
-  permit_params :titleEn, :titleAr, :business_id, :descriptionAr, :descriptionEn
+  permit_params :titleEn, :titleAr, :business_id, :descriptionAr, :descriptionEn, :image
 
   form do |f|
     f.semantic_errors *f.object.errors.keys
@@ -11,6 +11,7 @@ ActiveAdmin.register Offer do
       f.input :titleAr
       f.input :descriptionAr
       f.input :descriptionEn
+      f.input :image
     end
     f.actions
   end
