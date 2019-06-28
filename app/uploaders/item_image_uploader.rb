@@ -13,6 +13,10 @@ class ItemImageUploader < CarrierWave::Uploader::Base
     "#{model.category.business.nameEn}/menu/#{model.category.nameEn}/#{model.class.to_s.underscore}s"
   end
 
+  def fog_public
+    true
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
