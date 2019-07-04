@@ -1,8 +1,9 @@
 class Api::ApplicationController < ActionController::Base
   include DeviseTokenAuth::Concerns::SetUserByToken
-  include ActionController::RequestForgeryProtection
-  after_action -> {request.session_options[:skip] = true}
-  protect_from_forgery prepend: true
+  # include ActionController::RequestForgeryProtection
+  after_action -> {request.session_options[:skip] = true}, unless: :devise_controller?
+  # protect_from_forgery prepend: true
+  skip_before_action :verify_authenticity_token
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
