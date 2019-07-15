@@ -1,16 +1,17 @@
 class Api::V1::BusinessesController < Api::ApplicationController
   before_action :set_business, only: [:show, :update, :destroy]
+  before_action :authenticate_api_business!
 
-  # GET /businesses
+  # GET /current business logo
   def index
-    @businesses = Business.all
+    @logo = current_api_business.logo
 
-    render json: @businesses
+    render json: @logo
   end
 
   # GET /businesses/1
   def show
-    render json: @business
+    render json: @logo
   end
 
   # POST /businesses
@@ -39,12 +40,12 @@ class Api::V1::BusinessesController < Api::ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+  # Use callbacks to share common setup or constraints between actions.
     def set_business
       @business = Business.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+  # Only allow a trusted parameter "white list" through.
     def business_params
       params.require(:business).permit(:nameAr, :nameEn, :logo, :theme, :managerPhone, :wifiPassword)
     end
