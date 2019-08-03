@@ -10,7 +10,7 @@ class ItemImageUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "#{model.category.business.nameEn}/menu/#{model.category.nameEn}/#{model.class.to_s.underscore}s"
+    "#{model.category.business.nameEn.gsub(' ', '-')}/menu/#{model.category.nameEn}/#{model.class.to_s.underscore}s"
   end
 
   def fog_public
