@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'pages/support'
+
   namespace :api do
     namespace :v1 do
       get 'home/index'

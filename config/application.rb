@@ -36,6 +36,8 @@ module Menu
 
     config.app_generators.scaffold_controller = :scaffold_controller
 
+    Rails.application.config.assets.precompile += %w( pages.css )
+
     # If we want to use all HTTP verbs as DELETE and PATCH.
     # This is necessary because these verbs are simulated in Ruby on Rails
     # using a POST request with a param called _method in the request's body.
