@@ -76,10 +76,17 @@
       "size": 263862,
       "digest": "4b4e4d83c2195871aa86b0a517397f717c34638555dbeca4d09d5351779563b8",
       "integrity": "sha256-S05Ng8IZWHGqhrClFzl/cXw0Y4VV2+yk0J1TUXeVY7g="
+    },
+    "pages-57d767e007fc2260a04a2eb22b3be7246c97084c15524fdee1eb0750d86ac4df.css": {
+      "logical_path": "pages.css",
+      "mtime": "2019-08-03T22:31:17+03:00",
+      "size": 268064,
+      "digest": "57d767e007fc2260a04a2eb22b3be7246c97084c15524fdee1eb0750d86ac4df",
+      "integrity": "sha256-V9dn4Af8ImCgSi6yKzvnJGyXCEwVUk/e4esHUNhqxN8="
     }
   },
   "assets": {
-    "pages.css": "pages-4b4e4d83c2195871aa86b0a517397f717c34638555dbeca4d09d5351779563b8.css",
+    "pages.css": "pages-57d767e007fc2260a04a2eb22b3be7246c97084c15524fdee1eb0750d86ac4df.css",
     "active_admin.css": "active_admin-67b7f1b450ecee8f92b8b3082130a26fe07c52df417c72b9bbf230847b2d78b6.css",
     "active_admin/nested_menu_arrow.gif": "active_admin/nested_menu_arrow-15084d93c65c1964d7077700ea748bd2d70cfa2d4c19707c58a9c64e232dd442.gif",
     "active_admin/nested_menu_arrow_dark.gif": "active_admin/nested_menu_arrow_dark-7c43b8e0a5f8823875f49a093c9d7a6b374f885b6f9cc248ae9cd7e6e9b29034.gif",
