@@ -14,7 +14,7 @@ ActiveAdmin.register Item do
       f.input :preparationTime
       f.input :position, as: :select, collection: 1..32
       f.input :price
-      f.input :image
+      f.input :image, :hint => image_tag(f.object.image)
     end
     f.actions
   end
