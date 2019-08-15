@@ -11,7 +11,7 @@ ActiveAdmin.register Business do
       f.input :nameEn
       f.input :managerPhone
       f.input :theme
-      f.input :logo, :as => :file, :hint => image_tag(f.object.logo)
+      f.input :logo, :as => :file, :hint => image_tag(f.object.logo.url)
       f.input :wifiPassword
       f.input :password
     end

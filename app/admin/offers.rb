@@ -11,7 +11,7 @@ ActiveAdmin.register Offer do
       f.input :titleAr
       f.input :descriptionAr
       f.input :descriptionEn
-      f.input :image, :hint => image_tag(f.object.image)
+      f.input :image, :hint => image_tag(f.object.image.url)
     end
     f.actions
   end
