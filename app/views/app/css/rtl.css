@@ -1,0 +1,24 @@
+.owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    direction: ltr;
+}
+
+.side-icon-box {
+    padding-right: 80px;
+    padding-left: 0;
+}
+
+.side-icon-box .side-icon {
+    right: 0;
+    left: auto;
+}
+
+.ti-arrow-left:before {
+    content: "\e628";
+}
+
+.ti-arrow-right:before {
+    content: "\e629";
+}
