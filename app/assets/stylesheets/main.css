@@ -73,7 +73,7 @@ body {
 }
 
 body {
-    font-family: 'El Messiri', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 1.8;
@@ -134,7 +134,7 @@ input:-webkit-autofill:focus {
 .social-menu {
     list-style: none;
     margin: 0;
-    padding: 10px;
+    padding: 0;
 }
 
 .social-menu li {
@@ -224,19 +224,6 @@ input:-webkit-autofill:focus {
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 20px;
-}
-
-.page-title h2:after {
-    content: "\e675";
-    font-family: 'themify';
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 15px;
-    height: 15px;
-    font-size: 14px;
 }
 
 /**

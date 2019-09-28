@@ -1,0 +1,289 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="John Doe">
+  <meta name="description" content="">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>Home</title>
+  <!-- Place favicon.ico in the root directory -->
+
+  <%= favicon_link_tag 'favicon.ico' %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal:400,700&display=swap" rel="stylesheet">
+
+  <!-- Plugin-CSS -->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
+</head>
+
+<body data-spy="scroll" data-target="#primary-menu">
+
+<div class="preloader">
+  <div class="sk-folding-cube">
+    <div class="sk-cube1 sk-cube"></div>
+    <div class="sk-cube2 sk-cube"></div>
+    <div class="sk-cube4 sk-cube"></div>
+    <div class="sk-cube3 sk-cube"></div>
+  </div>
+</div>
+
+<!--Mainmenu-area-->
+<div class="mainmenu-area" data-spy="affix" data-offset-top="100">
+  <div class="container">
+    <!--Logo-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand logo">
+        <%= image_tag('logo.png', class: 'img-responsive') %>
+      </a>
+    </div>
+    <!--Logo/-->
+    <nav class="collapse navbar-collapse" id="primary-menu">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="active"><a href="#home-page">مرحباً</a></li>
+        <li><a href="#feature-page">المميزات</a></li>
+        <li><a href="#contact-page">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!--Header-area-->
+<header class="header-area overlay full-height relative v-center sky-bg" id="home-page">
+  <div class="container">
+    <div class="row v-center">
+      <div class="col-xs-12 col-md-7 header-text">
+        <h2>تطبيق المينو المجاني الأول في سوريا</h2>
+        <p>
+          تمتع بمنيو ذكية، ديناميكية وسهلة التعديل لتوفر لزباينك تجربة مميزة وعصرية
+          <br>
+          عبر تطبيق مينيوز المجاني!
+        </p>
+        <a href="#contact-form" class="button white">اشترك مجاناً</a>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-5 text-right">
+        <div class="screen-box screen-slider">
+          <div class="item">
+            <%= image_tag 'pads/2.png' %>
+
+          </div>
+          <div class="item">
+            <%= image_tag 'pads/4.png' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="gray-bg section-padding" id="feature-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+        <div class="page-title">
+          <h2>مميزات التطبيق</h2>
+          <p>
+            مينيوز بيساعدك كتير لتقدم مينو عصرية بتصميم راقي لتعبر فيه عن مطعمك وعروضك وكتير شغلات بتضمن
+            لزبائنك تجربة جديدة وممتعة!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="box">
+          <div class="box-icon">
+            <%= image_tag 'icons/1.png' %>
+          </div>
+          <h3>بأي اتجاه</h3>
+          <p>كيف ما مسكت المينيو لح تشتغل،<br> حتى بالمقلوب!</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="box">
+          <div class="box-icon">
+            <%= image_tag 'icons/2.png' %>
+          </div>
+          <h3>تصميم مميز</h3>
+          <p>تصميم بيعكس مظهر مطعمك و بيقدم تجربة جديدة لزبائنك</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="box">
+          <div class="box-icon">
+            <%= image_tag 'icons/3.png' %>
+          </div>
+          <h3>عدل بأي وقت</h3>
+          <p>التطبيق بيسمحلك تعدل كل محتويات المينيو بأي وقت وبسهولة كبيرة</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="box">
+          <div class="box-icon">
+            <%= image_tag 'icons/4.png' %>
+          </div>
+          <h3>متوفر بلغتين</h3>
+          <p>التطبيق بيدعم اللغتين العربية والانكليزية<br> بشكل سلس</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="box">
+          <div class="box-icon">
+            <%= image_tag 'icons/5.png' %>
+          </div>
+          <h3>عروض خاصة</h3>
+          <p>لتقدم كل العروض بشكل أسرع <br>وواضح أكتر</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="box">
+          <div class="box-icon">
+            <%= image_tag 'icons/6.png' %>
+          </div>
+          <h3>دعم 24/7</h3>
+          <p>فريقنا معك لما تحتاج أي مساعدة <br> وبأي وقت</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-area relative sky-bg" id="contact-page">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+          <div class="page-title">
+            <h2>تواصل معنا لتشترك بالتطبيق بشكل مجاني</h2>
+            <p>
+              سعداء بتقديم المساعدة والرد ع أي استفسار، فيك تتواصل معنا بسهولة عن طريق الواتس أو الفيس عبر الزر الصغير ع
+              اليسار
+              <br>
+              أو فيك تتواصل معنا ع الأيميل أو الأرقام التالية
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <address class="side-icon-boxes">
+          <div class="col-md-3">
+            <div class="side-icon-box">
+              <div class="side-icon">
+                <div class="icon-container">
+                  <i class="fa fa-whatsapp"></i>
+                </div>
+              </div>
+              <p><strong>واتس أب</strong>
+                <a href="whatsapp:00963991345379">0991-345-379</a> <br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="side-icon-box">
+              <div class="side-icon">
+                <div class="icon-container">
+                  <i class="fa fa-phone"></i>
+                </div>
+              </div>
+              <p><strong>موبايل</strong>
+                <a href="callto:0096393893917">0938-093-917</a> <br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="side-icon-box">
+              <div class="side-icon">
+                <div class="icon-container">
+                  <i class="fa fa-envelope-o"></i>
+                </div>
+              </div>
+              <p><strong>البريد الالكتروني</strong>
+                <a href="mailto:support@miniuze.com">support@miniuze.com</a> <br/>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="side-icon-box">
+              <p><strong>وسائل التواصل الاجتماعي</strong>
+              <ul class="social-menu text-right x-left">
+                <li><a href="https://www.facebook.com/miniuze/" target="_blank"><i
+                class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/miniuze_app/" target="_blank"><i
+                class="fa fa-instagram"></i></a></li>
+              </ul>
+              </p>
+            </div>
+
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <p>&copy;Copyright 2019 All right reserved. This template is made with <i class="fa fa-heart-o"
+                                                                                    aria-hidden="true"></i> by
+            <a href="https://colorlib.com">Colorlib</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+    $('.screen-slider').owlCarousel({
+        loop: true,
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 1000,
+        navText: ['<i class="fa fa-arrow-right"></i>', '<i class="fa fa-arrow-left" ></i>'],
+        items: 1,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        center: true,
+    });
+</script>
+<!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            facebook: "105950840754149", // Facebook page ID
+            whatsapp: "_963991345379", // WhatsApp number
+            call_to_action: "تواصل معنا بسهولة", // Call to action
+            button_color: "#A8CE50", // Color of button
+            position: "left", // Position may be 'right' or 'left'
+            order: "facebook,whatsapp", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () {
+            WhWidgetSendButton.init(host, proto, options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /WhatsHelp.io widget -->
+</body>
+
+</html>

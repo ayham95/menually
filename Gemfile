@@ -32,6 +32,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'carrierwave-aws'
 gem 'fog-aws'
 gem 'mini_magick'
+gem 'owlcarousel-rails'
+gem 'jquery-rails'
 
 
 group :development, :test do
