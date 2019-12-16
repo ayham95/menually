@@ -121,7 +121,7 @@ GEM
       devise (> 3.5.2, < 4.7)
       rails (>= 4.2.0, < 6)
     erubi (1.8.0)
-    excon (0.64.0)
+    excon (0.71.0)
     execjs (2.7.0)
     ffi (1.11.1)
     fog-aws (3.5.1)
